@@ -1,0 +1,64 @@
+/* Font */
+@font-face {
+    font-family: 'Montsserat';
+    src: url(../asset/font/montserrat-v31-latin-700.woff2) format('woff');
+}
+
+/* Style Utama */
+body {
+    font: 18px/36px 'Montsserat', sans-serif;
+    background-image: url()
+    background-color: #ddd;
+}
+h1 {
+    font-size: 80px;
+    margin: 50px 0;
+    text-align: center;
+    text-shadow: 5px 5px 10px orange, -5px -5px 10px black;
+}
+
+.container {
+    width: 700px;
+    background-color: gray;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.gallery li {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border: 5px solid black;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+.gallery li,
+.gallery li img
+.gallery li span{
+    border-radius: 50%;
+}
+
+.gallery li span {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(200, 200, 200, 0,5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    color: black;
+    text-shadow: 1px 1px 2px gray;
+    opacity: 0;
+}
+
+.gallery li a:hover span {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+.clear {
+    clear: both;
+}

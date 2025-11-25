@@ -1,0 +1,51 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: aquamarine;
+    line-height: 1.65;
+    padding-bottom: 500px;
+}
+
+/* Latihan 1 */
+.container-satu {
+    width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.kolom-utama {
+    flex: 3;
+    order: 2;
+}
+
+kolom-satu {
+    flex: 1;
+    order: 1;
+}
+
+kolom-dua {
+    flex: 1;
+    order: 3;
+}
+
+/* Latihan 2 */
+.container-dua {
+    width: 800px;
+    margin: 50px auto;
+}
+
+.layanan.satu { background-color: rgb(119, 119, 199);
+}
+
+.layanan.satu { background-color: rgb(119, 119, 199);
+}
+
+.layanan.satu { background-color: rgb(119, 119, 199);
+}
