@@ -62,3 +62,143 @@ h1 {
 .clear {
     clear: both;
 }
+.clear {
+    clear: both;
+}
+
+/* Overlay */
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 9999;
+    transition: 1s;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom:0;
+    right:0;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 100px;
+}
+
+.overlay img {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    margin: 5% auto;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.overlay:target img {
+    animation: fadeIn 1s;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.overlay:target .close {
+    animation: slideDownFade 0.5s forward;
+}
+
+.overlay .close:hover {
+    color: #ccc;
+}
+.overlay:target .close:hover {
+    animation: none;
+}
+
+.overlay:target .next{
+    animation: slideRightFade 1s 1s forward;
+}
+
+/*navigation*/
+.next, .prev {
+    background-image: url(../Assets/img/button/right.png);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);  
+}
+.prev {
+    background-image: url(../Assets/img/button/left.png);
+    left: 10px;
+    right: auto;
+}
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+    .gallery li {
+        width: 100px;
+        height: 100px;
+        margin-right: 5px;
+    }
+    .gallery li span {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+    }
+}
+@media (max-width: 480px) {
+    .gallery li {
+        width: 80px;
+        height: 80px;
+        margin-right: 5px;
+    }
+    .gallery li span {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    }
+}
+/* End of CSS File */
